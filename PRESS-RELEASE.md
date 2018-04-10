@@ -16,32 +16,29 @@ Oh, and I also like to write press-releases in what I call "Oprah-speak" for mai
 Once the project moves into development, the press release can be used as a touchstone; a guiding light. The product team can ask themselves, "Are we building what is in the press release?" If they find they're spending time building things that aren't in the press release (overbuilding), they need to ask themselves why. This keeps product development focused on achieving the customer benefits and not building extraneous stuff that takes longer to build, takes resources to maintain, and doesn't provide real customer benefit (at least not enough to warrant inclusion in the press release).
  -->
  
-## wydrn ##
+## wydrn? ##
   > What you doing right now?
-  Name the product in a way the reader (i.e. your target customers) will understand.
 
 ## Sub-Heading ##
-  > 
-  Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+  > People who want to stay on top of their own schedule.
 
 ## Summary ##
-  > At its core, our product keeps track of people's events and calibrates time and schedules
-  Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+  > We make remembering events easier.
 
 ## Problem ##
-  > Describe the problem your product solves.
+  > Not everyone knows what they're supposed to be doing next Thursday.
 
 ## Solution ##
-  > Describe how your product elegantly solves the problem.
+  > You can check and edit your schedule anytime anywhere.
 
 ## Quote from You ##
-  > A quote from a spokesperson in your company.
+  > "This is the Slack of calendars." - Leo Chung
 
 ## How to Get Started ##
-  > Describe how easy it is to get started.
+  > All you have to do is go to our site and log-in.
 
 ## Customer Quote ##
-  > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
+  > "I'm already using wyd rn? and it helps me keep track of when I have to check in on my cohort." - Ralph Plumley
 
 ## Closing and Call to Action ##
-  > Wrap it up and give pointers where the reader should go next.
+  > "Wyd rn? Marking your calendar in our app!"
