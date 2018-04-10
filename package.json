@@ -18,6 +18,17 @@
   },
   "homepage": "https://github.com/epeavy/hrr30-litecoin#readme",
   "devDependencies": {
-    "jest": "^22.4.3"
+    "bootstrap": "^4.1.0",
+    "jest": "^22.4.3",
+    "react": "^16.3.1",
+    "webpack": "^4.5.0"
+  },
+  "dependencies": {
+    "ajv": "^6.4.0",
+    "ajv-keywords": "^3.1.0",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.3",
+    "react-bootstrap": "^0.32.1",
+    "react-dom": "^16.3.1"
   }
 }
