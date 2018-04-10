@@ -17,7 +17,7 @@ Once the project moves into development, the press release can be used as a touc
  -->
  
 ## wyd rn? ##
-  For who want to stay on top of their own schedule.
+  > For who want to stay on top of their own schedule.
 
 ## Summary ##
   > We make remembering events easier.
