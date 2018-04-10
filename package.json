@@ -1,0 +1,23 @@
+{
+  "name": "hrr30-litecoin",
+  "version": "1.0.0",
+  "description": "> Pithy project description",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/epeavy/hrr30-litecoin.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/epeavy/hrr30-litecoin/issues"
+  },
+  "homepage": "https://github.com/epeavy/hrr30-litecoin#readme",
+  "devDependencies": {
+    "jest": "^22.4.3"
+  }
+}
