@@ -16,7 +16,6 @@ class App extends React.Component {
     console.log(username);
     console.log(email);
     console.log(password);
-    /*
     $.ajax({
       url: "/signup",
       method: "POST",
@@ -27,7 +26,6 @@ class App extends React.Component {
     }).fail(function(err) {
       console.log(err);
     });
-    */
   }
 
   componentDidMount() {

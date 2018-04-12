@@ -34,4 +34,11 @@ const saveUser = (userData, callback) => {
   });
 };
 
+const findUserHash = (userData) => {
+  User.findOne({username: userData.username}, function(err, user){
+    return user.hPassword;
+  });
+}
+
 module.exports.saveUser = saveUser;
+module.exports.findUser = findUserHash;

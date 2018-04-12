@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser')
 const app = express();
 const bcrypt = require('bcrypt');
-const db = require('./helpers.js');
+const auth = require('./helpers.js');
 const session = require('express-session');
 
 app.use(bodyParser.json());
@@ -33,16 +33,16 @@ app.use(session({
     res.redirect('/signup');
 });*/
 
-app.get('/homepage', db.restrict, function(req, res){
+app.get('/homepage', auth.restrict, function(req, res){
   res.send('This is the home page!');
 });
 
 app.get('/login', function(req, res){
-  db.checkCredentials(req.body, req, res)
+  auth.checkCredentials(req.body, req, res)
 })
 
 app.post('/signup', function(req, res){
-  db.saveCredentials(req.body);
+  auth.saveCredentials(req.body);
   res.redirect('/login');
 });
 
