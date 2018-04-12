@@ -5,12 +5,14 @@
   "main": "index.js",
   "babel": {
     "presets": [
+      "react",
+      "es2015",
       "env"
     ]
   },
   "scripts": {
     "react-dev": "webpack -d --watch",
-    "test": "jest"
+    "test": "jest --config jest.config.js"
   },
   "jest": {
     "transform": {
@@ -30,21 +32,22 @@
   "homepage": "https://github.com/epeavy/hrr30-litecoin#readme",
   "devDependencies": {
     "babel-core": "^6.26.0",
+    "babel-jest": "^22.4.3",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "bootstrap": "^4.1.0",
+    "enzyme": "^3.3.0",
     "jest": "^22.4.3",
     "node": "^9.11.0",
     "react": "^16.3.1",
+    "react-addons-test-utils": "^15.6.2",
     "webpack": "^4.5.0",
     "webpack-cli": "^2.0.14"
   },
   "dependencies": {
     "ajv": "^6.4.0",
     "ajv-keywords": "^3.1.0",
-    "babel-jest": "^22.4.3",
-    "bcrypt": "^2.0.0",
     "body-parser": "^1.18.2",
     "express": "^4.16.3",
     "express-session": "^1.15.6",
