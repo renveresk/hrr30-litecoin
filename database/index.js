@@ -12,7 +12,7 @@ var userSchema = mongoose.Schema({
     type: String,
     unique: true
   },
-  hash: String,
+  hPassword: String,
   email: String
 });
 
@@ -21,7 +21,7 @@ var User = mongoose.model('User', userSchema);
 const saveUser = (userData, callback) => {
   let userInfo = new User({
     username: userData.username,
-    hash: userData.hash,
+    hPassword: userData.hPassword,
     email: userData.email
   });
 
