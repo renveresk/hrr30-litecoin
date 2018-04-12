@@ -15,8 +15,7 @@ app.use(session({
   cookie: { secure: true }
 }));
 
-
-
+app.use(express.static(__dirname + '/../client/dist'));
 //Accepts a POST request for /login
 /*app.post('/login', function(req, res){
   //Should receive username and password
@@ -33,7 +32,7 @@ app.use(session({
     res.redirect('/signup');
 });*/
 
-app.get('/homepage', auth.restrict, function(req, res){
+app.get('/homepage', restrict, function(req, res){
   res.send('This is the home page!');
 });
 
@@ -50,3 +49,11 @@ app.listen(3000, () => {
   console.log('Now listening on port 3000!')
 });
 
+function restrict(req, res, next){
+  if(req.session.user){
+    next()
+  } else {
+    req.session.error = 'Access denied!';
+    res.redirect('/login');
+  }
+}

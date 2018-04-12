@@ -35,7 +35,7 @@ const checkCredentials = function(obj, req, res){
   })
 }
 
-const restrict = funciton(req, res, next){
+const restrict = function(req, res, next){
   if(req.session.user){
     next()
   } else {
@@ -46,6 +46,6 @@ const restrict = funciton(req, res, next){
 
 
 
-module.exports = saveCredentials;
-module.exports = checkCredentials;
-module.exports = restrict;
+module.exports.saveCredentials = saveCredentials;
+module.exports.checkCredentials = checkCredentials;
+module.exports.restrict = restrict;
