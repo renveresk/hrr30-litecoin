@@ -5,7 +5,6 @@ const bcrypt = require('bcrypt');
 const db = require('./helpers.js');
 const session = require('express-session');
 
-
 app.use(bodyParser.json());
 
 //Initializes session module
@@ -16,8 +15,10 @@ app.use(session({
   cookie: { secure: true }
 }));
 
+
+
 //Accepts a POST request for /login
-app.post('/login', function(req, res){
+/*app.post('/login', function(req, res){
   //Should receive username and password
   var username = req.body
   var password = req.body
@@ -30,19 +31,19 @@ app.post('/login', function(req, res){
   //If username is not found
     //Render a message that says try again or sign up
     res.redirect('/signup');
+});*/
+
+app.get('/homepage', db.restrict, function(req, res){
+  res.send('This is the home page!');
 });
 
-app.get('/homepage', function(req, res){
-
-});
-
-app.get('login/error', function(req, res){
-
+app.get('/login', function(req, res){
+  db.checkCredentials(req.body, req, res)
 })
 
 app.post('/signup', function(req, res){
   db.saveCredentials(req.body);
-  res.redirect('/homepage');
+  res.redirect('/login');
 });
 
 app.listen(3000, () => {
