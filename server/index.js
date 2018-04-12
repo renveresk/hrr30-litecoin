@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser')
 const app = express();
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcrypt-nodejs');
 const auth = require('./helpers.js');
 const session = require('express-session');
 
