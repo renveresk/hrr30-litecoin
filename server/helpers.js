@@ -1,6 +1,7 @@
 const bcrypt = require('bcrypt');
 const session = require('express-session');
 const express = require('express');
+const db = require('../database/index.js');
 
 const saveCredentials = function(obj){
   var username = obj.username;
@@ -11,6 +12,9 @@ const saveCredentials = function(obj){
       console.log('You received this err: ', err)
     } else {
     //Save username and passsword
+    db.saveUser(obj, function(){
+      console.log('User saved!')
+      });
     }
   });
 }
@@ -18,7 +22,7 @@ const saveCredentials = function(obj){
 const checkCredentials = function(obj, req, res){
   var username = obj.username;
   var password = obj.password;
-  var hash = //Fetch hash from database based on username
+  var hash = db.findUserHash;
   bcrypt.compare(password, hash, function(err, match){
     if (match){
       req.session.regenerate(function(){
