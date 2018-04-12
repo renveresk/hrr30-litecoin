@@ -17,3 +17,21 @@ var userSchema = mongoose.Schema({
 });
 
 var User = mongoose.model('User', userSchema);
+
+const saveUser = (userData, callback) => {
+  let userInfo = new User({
+    username: userData.username,
+    hash: userData.hash,
+    email: userData.email
+  });
+
+  userInfo.save(err => {
+    if (err) {
+      console.log(err);
+    } else {
+      callback();
+    }
+  });
+};
+
+module.exports.saveUser = saveUser;
