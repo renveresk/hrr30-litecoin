@@ -1,4 +1,4 @@
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcrypt-nodejs');
 const session = require('express-session');
 const express = require('express');
 const db = require('../database/index.js');
