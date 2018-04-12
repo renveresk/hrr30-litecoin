@@ -22,17 +22,17 @@ class Signup extends React.Component {
 
   handleUsernameChange(e) {
     this.setState({ username: e.target.value });
-    console.log(this.state.username);
+    //console.log(this.state.username);
   }
 
   handleEmailChange(e) {
     this.setState({ email: e.target.value });
-    console.log(this.state.email);
+    //console.log(this.state.email);
   }
 
   handlePasswordChange(e) {
     this.setState({ password: e.target.value });
-    console.log(this.state.password);
+    //console.log(this.state.password);
   }
 
   handleClick() {

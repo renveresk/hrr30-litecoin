@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1523507981518" clover="3.2.0">
+  <project timestamp="1523507981518" name="All files">
+    <metrics statements="13" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="3" elements="20" coveredelements="8" complexity="0" loc="13" ncloc="13" packages="2" files="2" classes="2">
+      <package name="hrr30-litecoin">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <file name="sum.js" path="/Users/felipefernandez/Documents/HackReactor/Course/hrr30-litecoin/sum.js">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="hrr30-litecoin.client.src.components">
+        <metrics statements="11" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="2"/>
+        <file name="Signup.jsx" path="/Users/felipefernandez/Documents/HackReactor/Course/hrr30-litecoin/client/src/components/Signup.jsx">
+          <metrics statements="11" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="2"/>
+          <line num="13" count="1" type="stmt"/>
+          <line num="14" count="1" type="stmt"/>
+          <line num="24" count="0" type="stmt"/>
+          <line num="25" count="0" type="stmt"/>
+          <line num="29" count="0" type="stmt"/>
+          <line num="30" count="0" type="stmt"/>
+          <line num="34" count="0" type="stmt"/>
+          <line num="35" count="0" type="stmt"/>
+          <line num="39" count="0" type="stmt"/>
+          <line num="40" count="0" type="stmt"/>
+          <line num="47" count="1" type="stmt"/>
+        </file>
+      </package>
+    </metrics>
+  </project>
+</coverage>
