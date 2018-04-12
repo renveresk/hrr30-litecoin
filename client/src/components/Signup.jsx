@@ -15,9 +15,7 @@ class Signup extends React.Component {
       username: '',
       email: '',
       password: ''
-
     };
-
   }
 
   handleUsernameChange(e) {
@@ -35,18 +33,33 @@ class Signup extends React.Component {
     //console.log(this.state.password);
   }
 
-  handleClick() {
-    console.log("I have been clicked!!!");
-    this.props.handleSubmit(this.state.username, this.state.email, this.state.password);
+  handleSubmit(username, email, password) {
+    console.log('Submitting get request....');
+    console.log(username);
+    console.log(email);
+    console.log(password);
+    $.ajax({
+      url: "/signup",
+      method: "POST",
+      contentType: "application/JSON",
+      data: JSON.stringify({username: username, email: email, password: password})
+    }).done(function(res) {
+      console.log(res);
+    }).fail(function(err) {
+      console.log(err);
+    });
   }
 
+  handleClick() {
+    console.log("I have been clicked!!!");
+    this.handleSubmit(this.state.username, this.state.email, this.state.password);
+  }
 
   //Look at https://react-bootstrap.github.io/components/forms/
   //Issues with CSS needs to be resolved.
   render () {
     return (
       <Form horizontal>
-
         <FormGroup controlId="formHorizontalUsername">
           <Col componentClass={ControlLabel} sm={2}>
             Username
