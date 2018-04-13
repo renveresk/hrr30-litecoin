@@ -39,6 +39,7 @@ app.get('/homepage', restrict, function(req, res){
 
 //When a user signs up
 app.post('/signup', function(req, res){
+  console.log(req.body);
   auth.saveCredentials(req.body);
   res.redirect('/login');
 });

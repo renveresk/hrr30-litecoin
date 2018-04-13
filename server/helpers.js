@@ -7,7 +7,9 @@ const saveCredentials = function(obj){
   var username = obj.username;
   var password = obj.password;
 
-  bcrypt.hash(password, 10, function(err, hash){
+  var salt = bcrypt.genSaltSync(10);
+
+  bcrypt.hash(password, salt, null, function(err, hash){
     if(err){
       console.log('You received this err: ', err)
     } else {

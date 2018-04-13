@@ -63,7 +63,7 @@ class App extends React.Component {
             <FormControl
             type="password"
             value={this.state.password}
-            onChange={this.handleUsernameChange.bind(this)}
+            onChange={this.handlePasswordChange.bind(this)}
             placeholder="Password" />
           </Col>
         </FormGroup>
