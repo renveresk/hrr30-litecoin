@@ -9,6 +9,7 @@ import Checkbox from 'react-bootstrap/lib/Checkbox';
 import Col from 'react-bootstrap/lib/Col';
 import Button from 'react-bootstrap/lib/Button';
 import ControlLabel from 'react-bootstrap/lib/ControlLabel';
+import Calendar from './components/Calendar.jsx';
 
 class App extends React.Component {
   constructor(props) {
