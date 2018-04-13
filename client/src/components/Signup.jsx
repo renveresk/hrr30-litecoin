@@ -111,3 +111,4 @@ class Signup extends React.Component {
 }
 
 export default Signup;
+// ReactDOM.render(<Signup />, document.getElementById('app'));

@@ -9,6 +9,7 @@ import Checkbox from 'react-bootstrap/lib/Checkbox';
 import Col from 'react-bootstrap/lib/Col';
 import Button from 'react-bootstrap/lib/Button';
 import ControlLabel from 'react-bootstrap/lib/ControlLabel';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 class App extends React.Component {
   constructor(props) {
@@ -37,6 +38,21 @@ class App extends React.Component {
     // need to change this to interact with server on click
     console.log(this.state);
   }
+
+  // onSignupClick() {
+  //   $.ajax({
+  //     method: 'GET',
+  //     url: '/signup',
+  //     contentType: 'application/json',
+  //     success: (data) => {
+  //       console.log('Success! Should redirect to signup page');
+  //     },
+  //     error: (err) => {
+  //       console.log('Error: ', err);
+  //     }
+
+  //   });
+  // }
 
   // need to add functionality for redirecting to signup page when signup button is clicked
   render () {
@@ -82,7 +98,7 @@ class App extends React.Component {
 
         <FormGroup>
           <Col smOffset={2} sm={10}>
-            <Button type="button">Sign up</Button>
+            <Link to='/signup'>Sign up</Link>
           </Col>
         </FormGroup>
       </Form>
@@ -90,4 +106,13 @@ class App extends React.Component {
   }
 }
 
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render((
+  <Router>
+    <div>
+      <Switch>
+        <Route exact path='/' component={App} />
+        <Route exact path='/signup' component={Signup}/>
+      </Switch>
+    </div>
+  </Router>
+), document.getElementById('app'));
