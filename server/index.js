@@ -32,18 +32,22 @@ app.use(express.static(__dirname + '/../client/dist'));
     res.redirect('/signup');
 });*/
 
+//A user's homepage
 app.get('/homepage', restrict, function(req, res){
   res.send('This is the home page!');
 });
 
-app.get('/login', function(req, res){
-  auth.checkCredentials(req.body, req, res)
-})
-
+//When a user signs up
 app.post('/signup', function(req, res){
   auth.saveCredentials(req.body);
   res.redirect('/login');
 });
+
+//When a user logs in
+app.post('/login', function(req, res){
+  auth.checkCredentials(req.body, req, res);
+  res.redirect('/homepage')
+})
 
 app.listen(3000, () => {
   console.log('Now listening on port 3000!')
