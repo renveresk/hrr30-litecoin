@@ -41,7 +41,10 @@ app.get('/homepage', restrict, function(req, res){
 app.post('/signup', function(req, res){
   console.log(req.body);
   auth.saveCredentials(req.body);
-  res.redirect('/login');
+  //After user submits sign up form, user is redirected
+  //to calendar.  At the time of this comment, /calendar has
+  //not been created yet.
+  res.redirect('/calendar');
 });
 
 //When a user logs in
