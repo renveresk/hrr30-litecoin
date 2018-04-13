@@ -5,6 +5,16 @@ const bcrypt = require('bcrypt-nodejs');
 const auth = require('./helpers.js');
 const session = require('express-session');
 
+/*
+exports.headers = {
+  'access-control-allow-origin': '*',
+  'access-control-allow-methods': 'GET, POST, PUT, DELETE, OPTIONS',
+  'access-control-allow-headers': 'content-type, accept',
+  'access-control-max-age': 10,
+  'Content-Type': 'text/html'
+};
+*/
+
 app.use(bodyParser.json());
 
 //Initializes session module
@@ -37,7 +47,22 @@ app.get('/homepage', restrict, function(req, res){
   res.send('This is the home page!');
 });
 
+<<<<<<< HEAD
 //When a user signs up
+=======
+app.get('/login', function(req, res){
+  auth.checkCredentials(req.body, req, res)
+});
+
+app.get('/signup', (req, res) => {
+  console.log('we are in GET method for /signup in server');
+  console.log(req.body);
+  // res.header(exports.headers);
+  // res.sendFile()
+  // res.redirect(''); // /signup creates a loop, so don't use
+});
+
+>>>>>>> used reacter-router to render signup page from signin/home page
 app.post('/signup', function(req, res){
   console.log(req.body);
   auth.saveCredentials(req.body);
