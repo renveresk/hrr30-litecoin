@@ -7,6 +7,7 @@ import Checkbox from 'react-bootstrap/lib/Checkbox';
 import Col from 'react-bootstrap/lib/Col';
 import Button from 'react-bootstrap/lib/Button';
 import ControlLabel from 'react-bootstrap/lib/ControlLabel';
+import $ from 'jquery';
 
 class Signup extends React.Component {
   constructor(props) {
@@ -101,7 +102,7 @@ class Signup extends React.Component {
 
         <FormGroup>
           <Col smOffset={2} sm={10}>
-            <Button type="submit" onClick={this.handleClick.bind(this)}>Sign up</Button>
+            <Button onClick={this.handleClick.bind(this)}>Sign up</Button>
           </Col>
         </FormGroup>
       </Form>
