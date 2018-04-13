@@ -10,6 +10,7 @@ import Col from 'react-bootstrap/lib/Col';
 import Button from 'react-bootstrap/lib/Button';
 import ControlLabel from 'react-bootstrap/lib/ControlLabel';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import Calendar from './components/Calendar.jsx';
 
 class App extends React.Component {
   constructor(props) {
