@@ -47,9 +47,7 @@ app.get('/homepage', restrict, function(req, res){
   res.send('This is the home page!');
 });
 
-<<<<<<< HEAD
 //When a user signs up
-=======
 app.get('/login', function(req, res){
   auth.checkCredentials(req.body, req, res)
 });
@@ -62,7 +60,6 @@ app.get('/signup', (req, res) => {
   // res.redirect(''); // /signup creates a loop, so don't use
 });
 
->>>>>>> used reacter-router to render signup page from signin/home page
 app.post('/signup', function(req, res){
   console.log(req.body);
   auth.saveCredentials(req.body);
